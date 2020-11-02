@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+nav{
+    height: 10vh;
+    width: 96vw;
+    background: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    padding: 0 40px;
+}
+
+nav .logo{
+    padding: 40px;
+}
+
+nav .logo img{
+    width: 40px;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 0 20px;
+    font-size: 12px;
+    font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
+}
+
+/* Section One - Landing */
+
+section{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing{
+    display: flex;
+}
+
+.content{
+    width: 25%;
+    height: 100vh;
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content h1,
+.content h5{
+    margin: 5px;
+    padding: 0;
+}
+
+.content h5{
+    opacity: 0.8;
+}
+
+.hirebtn{
+    padding: 10px 20px;
+    margin-top: 12px;
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.hirebtn a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
+.hero-img{
+    width: 75%;
+    height: 100vh;
+}
+
+.hero-img img{
+    width: 100%;
+    filter: contrast(1.2);
+}
+
+/* Section Two - Portfolio */
+
+.portfolio{
+    height: 100vh;
+}
+
+.header{
+    padding: 20px;
+}
+
+.header h1,
+.header h5{
+    padding: 0;
+    margin: 5px;
+}
+
+.header h5{
+    opacity: 0.8;
+}
+
+.container {
+    padding: 1% 1% 0% 1%;
+}
+
+.container::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.container .box{
+    width: 20%;
+    padding-bottom: 18%;
+}
+
+.box{
+    width: 96%;
+    margin: 2% 3%;
+    padding-bottom: 96%;
+    height: 0;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    background: #000;
+    opacity: 0;
+    z-index: 55;
+    width: 100%;
+    height: 100%;
+    transition: all 0.15s ease-out;
+}
+
+.box:hover::after{
+    background: #000;
+    opacity: 0.2;
+}
+
+.container .box .caption{
+    position: absolute;
+    z-index: 60;
+    width: 96%;
+    margin-left: 5%;
+    transform: scale(3);
+    text-align: start;
+    transition: all 0.15s ease-out;
+    color: #fff;
+    opacity: 0;
+    bottom: 10%;
+}
+
+.box:hover .caption{
+    transform: scale(1) translate(0%, -50%);
+    opacity: 1;
+}
+
+.box img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 50;
+    transition: all 0.15s ease-out;
+}
+
+.box:hover img{
+    height: 150%;
+}
+
+.view-more{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+}
+
+.view-more h3, .view-more h5{
+    padding: 0;
+    margin: 10px;
+}
+
+.view-more h5{
+    opacity: 0.5;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Section Three - About */
+
+.aboutme{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutmeimg{
+    padding: 60px 40px;
+    width: 20%;
+}
+
+.aboutmeimg img{
+    width: 100%;
+    filter: contrast(1.2);
+}
+
+.aboutmecontent{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+}
+
+.aboutheading h1{
+    font-size: 36px;
+}
+
+.aboutheading h1::after{
+    content: "";
+    display: block;
+    margin-top: 10px;
+    height: 4px;
+    width: 100px;
+    background: #ccc;
+    border-radius: 15px;
+}
+
+.aboutdesc p {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.aboutbtn{
+    padding: 10px 20px;
+    width: 25%;
+    align-self: flex-end;
+    background: #000;
+    border-radius: 4px;
+    margin-top: 18%;
+    text-align: center;
+}
+
+.aboutbtn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.aboutbgtext{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 70px;
+    position: absolute;
+    z-index: -1;
+    left: 8%;
+    top: 40%;
+    transform: rotate(90deg);
+    color: #9fa4b6;
+    opacity: 0.5;
+}
+
+/* Section Four - Contact */
+
+.contact{
+    background: #fff;
+    height: 100vh;
+}
+
+.form{
+    width: 40%;
+}
+
+.contactheading{
+    padding: 40px;
+}
+
+.contactheading h1, .contactheading h5{
+    padding: 0;
+    margin: 5px;
+}
+
+.contactheading h5{
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.contactcontent{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+fieldset{
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+input, textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 10px 0 5px;
+    padding: 10px;
+    font-family: 'Raleway';
+}
+
+textarea{
+    height: 100px;
+}
+
+label{
+    font-size: 14px;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+button{
+    cursor: pointer;
+    width: 25%;
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.contactimg{
+    width: 50%;
+    position: relative;
+}
+
+.contactimg img{
+    width: 100%;
+    filter: brightness(0.8);
+}
+
+.contactimgheading1{
+    position: absolute;
+    left: 0;
+    top: -29px;
+    z-index: 10;
+}
+
+.contactimgheading1 h1{
+    font-size: 100px;
+    color: #fff;
+}
+
+.contactimgheading2{
+    position: absolute;
+    right: 0;
+    bottom: -19px;
+    z-index: 10;
+}
+
+.contactimgheading2 h1{
+    font-size: 100px;
+    color: #fff;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 540px){
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    nav{
+        width: 96vw;
+        padding: 0;
+    }
+    .landing{
+        flex-direction: column;
+    }
+    .content{
+        margin-top: 10%;
+    }
+    .content, .hero-img{
+        width: 100vw;
+        height: 50vh;
+    }
+    /* Section 2 */
+    .container{
+        text-align: center;
+    }
+    .portfolio .header h1{
+        font-size: 14px;
+    }
+    .portfolio .header h5{
+        font-size: 12px;
+    }
+    .container .box{
+        width: 30%;
+        padding-bottom: 30%;
+        margin-bottom: 20px;
+        left: 15%;
+    }
+    .view-more h3{
+        display: none;
+    }
+    .view-more h5{
+        font-size: 14px;
+    }
+    .container .box .caption{
+        opacity: 1;
+        transform: scale(1);
+        bottom: 5%;
+    }
+    .box::after{
+        opacity: 0.3;
+        left: 0;
+    }
+    .view-more{
+        display: inline-block;
+    }
+    
+    /* Section 3 */
+    .aboutme{
+        flex-direction: column;
+        text-align: center;
+    }
+    .aboutmeimg{
+        width: 40vw;
+        padding: 0;
+        margin-top: 5vh;
+    }
+    .aboutmecontent{
+        width: 80vw;
+    }
+    .aboutheading h1::after{
+        display: none;
+    }
+    .aboutbgtext{
+        display: none;
+    }
+    .aboutheading h1{
+        font-size: 18px;
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+    .aboutdesc p{
+        font-size: 13px;
+    }
+    .aboutbtn{
+        padding: 10px 20px;
+        width: 40%;
+        margin-top: 5%;
+        align-self: center;
+    }
+    /* Section 4 */
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contactheading{
+        text-align: center;
+    }
+    .contactcontent{
+        flex-direction: column;
+    }
+    .form{
+        width: 90vw;
+    }
+    .input,.textarea{
+        width: 95%;
+    }
+    button{
+        width: 100%;
+    }
+    .contactimg{
+        display: none;
+    }
+}
